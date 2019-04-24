@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Sidebar from "./components/Sidebar";
+import SidebarContainer from "./containers/SidebarContainer";
 import ProductListContainer from "./containers/ProductListContainer";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-3 col-sm-3">
-          <Sidebar/>
+          <SidebarContainer/>
         </div>
 	      <div className="col-md-9 col-sm-9">
           <ProductListContainer/>

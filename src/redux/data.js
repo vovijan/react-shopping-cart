@@ -1,242 +1,272 @@
 export const data = [
-  {
-    "id": "1",
-    "name": "Practical Rubber Hat",
-    "pic": "http://lorempixel.com/640/480/sports",
-    "color": "purple",
-    "price": "975.00",
-    "company": "Paucek and Sons"
-  },
-  {
-    "id": "2",
-    "name": "Gorgeous Metal Bacon",
-    "pic": "http://lorempixel.com/640/480/food",
-    "color": "purple",
-    "price": "637.00",
-    "company": "Wintheiser, Hagenes and Sanford"
-  },
-  {
-    "id": "3",
-    "name": "Refined Plastic Cheese",
-    "pic": "http://lorempixel.com/640/480/abstract",
-    "color": "tan",
-    "price": "409.00",
-    "company": "Kessler LLC"
-  },
-  {
-    "id": "4",
-    "name": "Handcrafted Soft Cheese",
-    "pic": "http://lorempixel.com/640/480/city",
-    "color": "red",
-    "price": "651.00",
-    "company": "Kling, Treutel and Towne"
-  },
-  {
-    "id": "5",
-    "name": "Intelligent Wooden Chicken",
-    "pic": "http://lorempixel.com/640/480/fashion",
-    "color": "white",
-    "price": "646.00",
-    "company": "Huels - Bode"
-  },
-  {
-    "id": "6",
-    "name": "Ergonomic Frozen Pizza",
-    "pic": "http://lorempixel.com/640/480/transport",
-    "color": "cyan",
-    "price": "102.00",
-    "company": "Waelchi - Rohan"
-  },
-  {
-    "id": "7",
-    "name": "Gorgeous Rubber Bike",
-    "pic": "http://lorempixel.com/640/480/technics",
-    "color": "turquoise",
-    "price": "481.00",
-    "company": "Ward, Harris and Rutherford"
-  },
-  {
-    "id": "8",
-    "name": "Fantastic Concrete Table",
-    "pic": "http://lorempixel.com/640/480/transport",
-    "color": "salmon",
-    "price": "615.00",
-    "company": "Schoen, Schiller and Fahey"
-  },
-  {
-    "id": "9",
-    "name": "Gorgeous Steel Hat",
-    "pic": "http://lorempixel.com/640/480/city",
-    "color": "violet",
-    "price": "369.00",
-    "company": "Hyatt, Bernhard and Schumm"
-  },
-  {
-    "id": "10",
-    "name": "Intelligent Cotton Gloves",
-    "pic": "http://lorempixel.com/640/480/transport",
-    "color": "fuchsia",
-    "price": "347.00",
-    "company": "Sipes Inc"
-  },
-  {
-    "id": "11",
-    "name": "Awesome Metal Salad",
-    "pic": "http://lorempixel.com/640/480/technics",
-    "color": "ivory",
-    "price": "105.00",
-    "company": "Pacocha - Waters"
-  },
-  {
-    "id": "12",
-    "name": "Unbranded Granite Pants",
-    "pic": "http://lorempixel.com/640/480/nature",
-    "color": "olive",
-    "price": "752.00",
-    "company": "Dare, Rosenbaum and O'Hara"
-  },
-  {
-    "id": "13",
-    "name": "Incredible Frozen Chicken",
-    "pic": "http://lorempixel.com/640/480/transport",
-    "color": "violet",
-    "price": "900.00",
-    "company": "Stoltenberg, Padberg and Botsford"
-  },
-  {
-    "id": "14",
-    "name": "Awesome Steel Cheese",
-    "pic": "http://lorempixel.com/640/480/nightlife",
-    "color": "lime",
-    "price": "869.00",
-    "company": "Kovacek Inc"
-  },
-  {
-    "id": "15",
-    "name": "Licensed Cotton Gloves",
-    "pic": "http://lorempixel.com/640/480/animals",
-    "color": "plum",
-    "price": "129.00",
-    "company": "Wunsch, Huels and Anderson"
-  },
-  {
-    "id": "16",
-    "name": "Incredible Cotton Mouse",
-    "pic": "http://lorempixel.com/640/480/nightlife",
-    "color": "green",
-    "price": "953.00",
-    "company": "West Group"
-  },
-  {
-    "id": "17",
-    "name": "Tasty Granite Shirt",
-    "pic": "http://lorempixel.com/640/480/fashion",
-    "color": "red",
-    "price": "977.00",
-    "company": "Stamm, Turner and Blanda"
-  },
-  {
-    "id": "18",
-    "name": "Gorgeous Soft Tuna",
-    "pic": "http://lorempixel.com/640/480/transport",
-    "color": "pink",
-    "price": "542.00",
-    "company": "Raynor, Abshire and Stoltenberg"
-  },
-  {
-    "id": "19",
-    "name": "Fantastic Soft Table",
-    "pic": "http://lorempixel.com/640/480/transport",
-    "color": "mint green",
-    "price": "103.00",
-    "company": "Altenwerth Inc"
-  },
-  {
-    "id": "20",
-    "name": "Handmade Rubber Keyboard",
-    "pic": "http://lorempixel.com/640/480/technics",
-    "color": "salmon",
-    "price": "717.00",
-    "company": "Pagac, Bechtelar and Von"
-  },
-  {
-    "id": "21",
-    "name": "Handcrafted Soft Ball",
-    "pic": "http://lorempixel.com/640/480/people",
-    "color": "maroon",
-    "price": "302.00",
-    "company": "Williamson - Grimes"
-  },
-  {
-    "id": "22",
-    "name": "Practical Cotton Salad",
-    "pic": "http://lorempixel.com/640/480/transport",
-    "color": "mint green",
-    "price": "342.00",
-    "company": "Morissette LLC"
-  },
-  {
-    "id": "23",
-    "name": "Refined Granite Computer",
-    "pic": "http://lorempixel.com/640/480/abstract",
-    "color": "purple",
-    "price": "458.00",
-    "company": "Wolf Group"
-  },
-  {
-    "id": "24",
-    "name": "Sleek Soft Cheese",
-    "pic": "http://lorempixel.com/640/480/business",
-    "color": "black",
-    "price": "514.00",
-    "company": "Osinski - Berge"
-  },
-  {
-    "id": "25",
-    "name": "Sleek Cotton Shirt",
-    "pic": "http://lorempixel.com/640/480/technics",
-    "color": "ivory",
-    "price": "459.00",
-    "company": "Hintz, Collins and Kling"
-  },
-  {
-    "id": "26",
-    "name": "Rustic Concrete Table",
-    "pic": "http://lorempixel.com/640/480/business",
-    "color": "plum",
-    "price": "601.00",
-    "company": "Crist Group"
-  },
-  {
-    "id": "27",
-    "name": "Incredible Granite Chips",
-    "pic": "http://lorempixel.com/640/480/fashion",
-    "color": "red",
-    "price": "142.00",
-    "company": "Friesen, Schmidt and Streich"
-  },
-  {
-    "id": "28",
-    "name": "Fantastic Cotton Chips",
-    "pic": "http://lorempixel.com/640/480/people",
-    "color": "yellow",
-    "price": "926.00",
-    "company": "Vandervort - Conn"
-  },
-  {
-    "id": "29",
-    "name": "Practical Wooden Chicken",
-    "pic": "http://lorempixel.com/640/480/sports",
-    "color": "white",
-    "price": "53.00",
-    "company": "Brown - Mills"
-  },
-  {
-    "id": "30",
-    "name": "Gorgeous Concrete Salad",
-    "pic": "http://lorempixel.com/640/480/technics",
-    "color": "yellow",
-    "price": "792.00",
-    "company": "Steuber, Considine and Fay"
-  }
+	{
+		"id": "1",
+		"name": "Gorgeous Fresh Chips",
+		"pic": "http://lorempixel.com/640/480/food",
+		"color": "violet",
+		"price": "242.00",
+		"company": "Champlin Group",
+		"inStock": true
+	},
+	{
+		"id": "2",
+		"name": "Small Metal Chicken",
+		"pic": "http://lorempixel.com/640/480/nightlife",
+		"color": "mint green",
+		"price": "827.00",
+		"company": "Watsica - Mitchell",
+		"inStock": true
+	},
+	{
+		"id": "3",
+		"name": "Generic Concrete Pizza",
+		"pic": "http://lorempixel.com/640/480/transport",
+		"color": "ivory",
+		"price": "425.00",
+		"company": "Howell, Quigley and Rosenbaum",
+		"inStock": true
+	},
+	{
+		"id": "4",
+		"name": "Awesome Soft Bike",
+		"pic": "http://lorempixel.com/640/480/food",
+		"color": "orchid",
+		"price": "423.00",
+		"company": "Hauck - Kunze",
+		"inStock": false
+	},
+	{
+		"id": "5",
+		"name": "Ergonomic Cotton Ball",
+		"pic": "http://lorempixel.com/640/480/city",
+		"color": "orchid",
+		"price": "187.00",
+		"company": "Champlin Group",
+		"inStock": false
+	},
+	{
+		"id": "6",
+		"name": "Fantastic Plastic Sausages",
+		"pic": "http://lorempixel.com/640/480/animals",
+		"color": "salmon",
+		"price": "762.00",
+		"company": "Swaniawski, Ondricka and Shields",
+		"inStock": true
+	},
+	{
+		"id": "7",
+		"name": "Licensed Rubber Hat",
+		"pic": "http://lorempixel.com/640/480/animals",
+		"color": "turquoise",
+		"price": "475.00",
+		"company": "Towne and Sons",
+		"inStock": true
+	},
+	{
+		"id": "8",
+		"name": "Unbranded Fresh Shoes",
+		"pic": "http://lorempixel.com/640/480/cats",
+		"color": "fuchsia",
+		"price": "896.00",
+		"company": "Dicki - Langosh",
+		"inStock": false
+	},
+	{
+		"id": "9",
+		"name": "Unbranded Frozen Gloves",
+		"pic": "http://lorempixel.com/640/480/people",
+		"color": "fuchsia",
+		"price": "91.00",
+		"company": "Champlin Group",
+		"inStock": false
+	},
+	{
+		"id": "10",
+		"name": "Awesome Fresh Shoes",
+		"pic": "http://lorempixel.com/640/480/fashion",
+		"color": "plum",
+		"price": "749.00",
+		"company": "McCullough LLC",
+		"inStock": true
+	},
+	{
+		"id": "11",
+		"name": "Rustic Metal Hat",
+		"pic": "http://lorempixel.com/640/480/cats",
+		"color": "blue",
+		"price": "356.00",
+		"company": "Hammes Group",
+		"inStock": true
+	},
+	{
+		"id": "12",
+		"name": "Licensed Concrete Salad",
+		"pic": "http://lorempixel.com/640/480/fashion",
+		"color": "white",
+		"price": "946.00",
+		"company": "Cummings - Schmeler",
+		"inStock": false
+	},
+	{
+		"id": "13",
+		"name": "Handmade Rubber Mouse",
+		"pic": "http://lorempixel.com/640/480/abstract",
+		"color": "violet",
+		"price": "635.00",
+		"company": "Heathcote and Sons",
+		"inStock": false
+	},
+	{
+		"id": "14",
+		"name": "Licensed Cotton Towels",
+		"pic": "http://lorempixel.com/640/480/nature",
+		"color": "indigo",
+		"price": "245.00",
+		"company": "Champlin Group",
+		"inStock": true
+	},
+	{
+		"id": "15",
+		"name": "Generic Soft Chicken",
+		"pic": "http://lorempixel.com/640/480/cats",
+		"color": "turquoise",
+		"price": "1.00",
+		"company": "Stark - Haley",
+		"inStock": false
+	},
+	{
+		"id": "16",
+		"name": "Unbranded Steel Table",
+		"pic": "http://lorempixel.com/640/480/technics",
+		"color": "azure",
+		"price": "670.00",
+		"company": "Hammes Group",
+		"inStock": true
+	},
+	{
+		"id": "17",
+		"name": "Sleek Wooden Car",
+		"pic": "http://lorempixel.com/640/480/cats",
+		"color": "gold",
+		"price": "701.00",
+		"company": "Bartoletti and Sons",
+		"inStock": false
+	},
+	{
+		"id": "18",
+		"name": "Awesome Cotton Hat",
+		"pic": "http://lorempixel.com/640/480/business",
+		"color": "plum",
+		"price": "774.00",
+		"company": "Champlin, O'Connell and Wisozk",
+		"inStock": true
+	},
+	{
+		"id": "19",
+		"name": "Intelligent Metal Chips",
+		"pic": "http://lorempixel.com/640/480/cats",
+		"color": "blue",
+		"price": "489.00",
+		"company": "Hammes Group",
+		"inStock": false
+	},
+	{
+		"id": "20",
+		"name": "Licensed Rubber Car",
+		"pic": "http://lorempixel.com/640/480/city",
+		"color": "magenta",
+		"price": "991.00",
+		"company": "Huels - Effertz",
+		"inStock": false
+	},
+	{
+		"id": "21",
+		"name": "Handcrafted Rubber Car",
+		"pic": "http://lorempixel.com/640/480/people",
+		"color": "black",
+		"price": "223.00",
+		"company": "Koelpin Group",
+		"inStock": true
+	},
+	{
+		"id": "22",
+		"name": "Tasty Soft Pants",
+		"pic": "http://lorempixel.com/640/480/abstract",
+		"color": "violet",
+		"price": "646.00",
+		"company": "Bartoletti and Sons",
+		"inStock": false
+	},
+	{
+		"id": "23",
+		"name": "Awesome Soft Hat",
+		"pic": "http://lorempixel.com/640/480/fashion",
+		"color": "plum",
+		"price": "792.00",
+		"company": "Bartoletti and Sons",
+		"inStock": false
+	},
+	{
+		"id": "24",
+		"name": "Handcrafted Steel Sausages",
+		"pic": "http://lorempixel.com/640/480/animals",
+		"color": "teal",
+		"price": "375.00",
+		"company": "Bednar - Block",
+		"inStock": true
+	},
+	{
+		"id": "25",
+		"name": "Generic Granite Towels",
+		"pic": "http://lorempixel.com/640/480/people",
+		"color": "lavender",
+		"price": "950.00",
+		"company": "Bartoletti and Sons",
+		"inStock": false
+	},
+	{
+		"id": "26",
+		"name": "Rustic Rubber Chips",
+		"pic": "http://lorempixel.com/640/480/technics",
+		"color": "plum",
+		"price": "163.00",
+		"company": "Padberg, Hayes and Herzog",
+		"inStock": false
+	},
+	{
+		"id": "27",
+		"name": "Ergonomic Concrete Gloves",
+		"pic": "http://lorempixel.com/640/480/nightlife",
+		"color": "green",
+		"price": "172.00",
+		"company": "Fay, Price and Langosh",
+		"inStock": false
+	},
+	{
+		"id": "28",
+		"name": "Practical Soft Towels",
+		"pic": "http://lorempixel.com/640/480/business",
+		"color": "azure",
+		"price": "611.00",
+		"company": "Muller LLC",
+		"inStock": true
+	},
+	{
+		"id": "29",
+		"name": "Small Wooden Bike",
+		"pic": "http://lorempixel.com/640/480/nature",
+		"color": "turquoise",
+		"price": "57.00",
+		"company": "Bartoletti and Sons",
+		"inStock": false
+	},
+	{
+		"id": "30",
+		"name": "Awesome Plastic Shirt",
+		"pic": "http://lorempixel.com/640/480/fashion",
+		"color": "red",
+		"price": "803.00",
+		"company": "Bartoletti and Sons",
+		"inStock": true
+	}
 ]
