@@ -1,15 +1,24 @@
 import React from 'react';
 
 const ListItem = (props) => {
+	const { pic, name, color, price, company } = props.products;
+	const colorProd = props.products.color;
+	const styleProd = {
+		color: colorProd
+	};
 	return (
-		<div className="card" style={{width: '18rem'}}>
-			<img src="..." className="card-img-top" alt="..." />
-			<div className="card-body">
-				<h5 className="card-title">Название карточки</h5>
-				<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<button className="btn btn-primary">Переход куда-нибудь</button>
+		<li>
+			<div className="card" style={{width: '18rem'}}>
+				<img src={pic} className="card-img-top" alt="picture" />
+				<div className="card-body">
+					<h6 className="card-title">-{name}-</h6>
+					<p className="card-text">{company}</p>
+					<p className="card-text" style={styleProd}>{color}</p>
+					<p className="card-text">${price}</p>
+					<button className="btn btn-success">Добавить в Корзину</button>
+				</div>
 			</div>
-		</div>
+		</li>
 	);
 };
 

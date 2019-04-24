@@ -1,16 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ListItem from "./ListItem";
 
-class ProductList extends Component {
-	render() {
-		return (
-			<>
-				<ul>
-					<ListItem/>
-				</ul>
-			</>
-		)
-	}
-}
+import './styleComponents.css';
+
+const ProductList = (props) => {
+	return (
+		<>
+			<ul>
+				{
+					props.products.map(product => {
+						return <ListItem key={product.id} products={product}/>
+					})
+				}
+			</ul>
+		</>
+	)
+};
 
 export default ProductList;
