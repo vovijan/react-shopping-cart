@@ -1,13 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import BasketModal from '../components/modal/BasketModal';
+import Basket from "../components/modal/Basket";
+import { addToCart } from '../redux/actions';
 
 const mapStateToProps = state => ({
 	products: state.cart
 });
 
-const BasketContainer = ({ products }) => <BasketModal goods={products}/>;
+const mapDispatchToProps = dispatch => ({
+	addToCart: (name) => {
+		dispatch(addToCart( name ));
+	}
+});
+
+const BasketContainer = ({ products }) => <Basket goods={products} addToCart={addToCart}/>;
 
 export default connect(
-	mapStateToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(BasketContainer);

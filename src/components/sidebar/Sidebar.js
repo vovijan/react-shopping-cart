@@ -32,10 +32,6 @@ const Sidebar = (props) => {
 					<button className="btn btn-light">Out Stock</button>
 				</div>
 			</div>
-
-			<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-				Запустить модальное окно
-			</button>
 		</div>
 	)
 };

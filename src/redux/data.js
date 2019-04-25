@@ -272,23 +272,6 @@ export const data = {
 		}
 	],
 	cart: [
-		{
-			"id": "24",
-			"name": "Handcrafted Steel Sausages",
-			"pic": "http://lorempixel.com/640/480/animals",
-			"color": "teal",
-			"price": "375.00",
-			"company": "Bednar - Block",
-			"inStock": true
-		},
-		{
-			"id": "25",
-			"name": "Generic Granite Towels",
-			"pic": "http://lorempixel.com/640/480/people",
-			"color": "lavender",
-			"price": "950.00",
-			"company": "Bartoletti and Sons",
-			"inStock": false
-		}
+
 	]
 };

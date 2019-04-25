@@ -1,14 +1,14 @@
 import React from 'react';
 import SidebarContainer from "./containers/SidebarContainer";
 import ProductListContainer from "./containers/ProductListContainer";
-import Basket from "./components/modal/Basket";
+import BasketContainer from "./containers/BasketContainer";
 
 import './App.css';
 
 function App() {
   return (
     <div className="container-fluid">
-      <Basket />
+      <BasketContainer />
       <div className="row">
         <div className="col-md-3 col-sm-3">
           <SidebarContainer/>

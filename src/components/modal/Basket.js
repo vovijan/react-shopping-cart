@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-responsive-modal';
-import BasketContainer from "../../containers/BasketContainer";
+import BasketModal from "./BasketModal";
 
 import './Basket.css';
 
@@ -24,9 +24,9 @@ export default class Basket extends React.Component {
 				<button
 					className='btn btn-lg basket__button'
 					onClick={this.onOpenModal}
-				/>
+				><span className='button__color'>{this.props.goods.length}</span></button>
 				<Modal open={open} onClose={this.onCloseModal} center>
-					<BasketContainer />
+					<BasketModal goods={this.props.goods} />
 				</Modal>
 			</>
 		)
