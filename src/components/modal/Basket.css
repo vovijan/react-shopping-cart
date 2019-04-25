@@ -8,3 +8,15 @@
     background: url("./basket.svg") center no-repeat;
     background-size: cover;
 }
+
+.li__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basket__row {
+    justify-content: center;
+    align-items: center;
+}
