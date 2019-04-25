@@ -16,13 +16,6 @@ const mapStateToProps = state => {
 		}
 	});
 
-	/*const nameCompany = state.map(item => {
-		return {
-			id: item.id,
-			company: item.company
-		}
-	});*/
-
 	return {nameCompany};
 };
 
