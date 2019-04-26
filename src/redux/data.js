@@ -13,7 +13,7 @@ export const data = {
 			"id": 2,
 			"name": "Small Metal Chicken",
 			"pic": "http://lorempixel.com/640/480/nightlife",
-			"color": "mint green",
+			"color": "green",
 			"price": 827,
 			"company": "Hammes Group",
 			"inStock": true
@@ -22,7 +22,7 @@ export const data = {
 			"id": 3,
 			"name": "Generic Concrete Pizza",
 			"pic": "http://lorempixel.com/640/480/transport",
-			"color": "ivory",
+			"color": "black",
 			"price": 425,
 			"company": "Howell, Quigley and Rosenbaum",
 			"inStock": true
@@ -103,7 +103,7 @@ export const data = {
 			"id": 12,
 			"name": "Licensed Concrete Salad",
 			"pic": "http://lorempixel.com/640/480/fashion",
-			"color": "white",
+			"color": "red",
 			"price": 946,
 			"company": "Cummings - Schmeler",
 			"inStock": false
@@ -139,7 +139,7 @@ export const data = {
 			"id": 16,
 			"name": "Unbranded Steel Table",
 			"pic": "http://lorempixel.com/640/480/technics",
-			"color": "azure",
+			"color": "yellow",
 			"price": 670.,
 			"company": "Hammes Group",
 			"inStock": true
@@ -247,7 +247,7 @@ export const data = {
 			"id": "28",
 			"name": "Practical Soft Towels",
 			"pic": "http://lorempixel.com/640/480/business",
-			"color": "azure",
+			"color": "red",
 			"price": 611,
 			"company": "Muller LLC",
 			"inStock": true

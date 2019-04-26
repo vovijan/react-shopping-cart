@@ -31,12 +31,11 @@ export default class ListItem extends Component {
 						<h6 className="card-title">-{name}-</h6>
 						<p className="card-text">{company}</p>
 						<p className="card-text" style={styleProd}>{color}</p>
-						<p className="card-text">${price}</p>
 						{
 							inStock ? <button className="btn btn-success"
 							                  onClick={this.handleClick}
 								>
-									Add in Cart
+									${price}
 								</button> :
 								<button className="btn btn-outline-secondary" disabled>
 									Out Stock
