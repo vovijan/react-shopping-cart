@@ -1,4 +1,4 @@
-import { ADD_TO_CART } from "./constants";
+import {ADD_TO_CART, DELETE_TO_CART} from "./constants";
 import {data} from './data';
 
 const initialState = data;
@@ -38,6 +38,10 @@ export const reducer = (state = initialState, action) => {
 					}
 				]
 			};
+		/*case DELETE_TO_CART:
+			return {
+
+			};*/
 		default:
 			return state;
 	}
