@@ -38,10 +38,11 @@ export const reducer = (state = initialState, action) => {
 					}
 				]
 			};
-		/*case DELETE_TO_CART:
+		case DELETE_TO_CART:
 			return {
-
-			};*/
+				...state,
+				cart: state.cart.filter(item => item.id !== action.payload.id)
+			};
 		default:
 			return state;
 	}

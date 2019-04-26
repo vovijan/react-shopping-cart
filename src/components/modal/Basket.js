@@ -34,7 +34,7 @@ export default class Basket extends React.Component {
 					</span>
 				</button>
 				<Modal open={open} onClose={this.onCloseModal} center>
-					<BasketModal goods={this.props.goods} />
+					<BasketModal goods={this.props.goods} deleteToCart={this.props.deleteToCart} />
 				</Modal>
 			</>
 		)

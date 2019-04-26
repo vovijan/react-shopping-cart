@@ -28,7 +28,9 @@ export default class BasketModal extends React.Component {
 										</div>
 									</div>
 								</div>
-								<button type="button" className="btn btn-outline-danger"><i className="fas fa-ban"></i></button>
+								<button type="button" className="btn btn-outline-danger" onClick={() => this.props.deleteToCart(good.id)}>
+									<i className="fas fa-ban"></i>
+								</button>
 							</li>
 						})
 					}
