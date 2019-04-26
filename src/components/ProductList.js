@@ -9,7 +9,11 @@ const ProductList = (props) => {
 			<ul>
 				{
 					props.products.map(product => {
-						return <ListItem key={product.id} products={product}/>
+						return <ListItem
+										key={product.id}
+										products={product}
+										addToCart={props.addToCart}
+									/>
 					})
 				}
 			</ul>

@@ -1,9 +1,25 @@
 import React, { Component } from 'react';
 
 export default class ListItem extends Component {
+
+	state = {
+		num: 1
+	};
+
+	handleClick = () => {
+		this.props.addToCart(
+			this.props.products.id,
+			this.props.products.pic,
+			this.props.products.name,
+			this.props.products.price,
+			this.props.products.company,
+			this.state.num
+		);
+	};
+
 	render() {
-		const {pic, name, color, price, company, inStock} = props.products;
-		const colorProd = props.products.color;
+		const {pic, name, color, price, company, inStock} = this.props.products;
+		const colorProd = this.props.products.color;
 		const styleProd = {
 			color: colorProd
 		};
@@ -17,11 +33,13 @@ export default class ListItem extends Component {
 						<p className="card-text" style={styleProd}>{color}</p>
 						<p className="card-text">${price}</p>
 						{
-							inStock ? <button className="btn btn-success">
-									Добавить в Корзину
+							inStock ? <button className="btn btn-success"
+							                  onClick={this.handleClick}
+								>
+									Add in Cart
 								</button> :
 								<button className="btn btn-outline-secondary" disabled>
-									Нет в наличии
+									Out Stock
 								</button>
 						}
 					</div>

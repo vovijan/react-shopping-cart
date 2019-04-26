@@ -17,6 +17,7 @@ const mapStateToProps = state => {
 	});
 
 	return {nameCompany};
+
 };
 
 const SidebarContainer = ({nameCompany}) => <Sidebar nameCompany={nameCompany}/>;

@@ -22,7 +22,7 @@ export default class BasketModal extends React.Component {
 												<p className="card-text">{good.company}</p>
 												<p className="card-text">${good.price}</p>
 												<p className="card-text">
-													<small className="text-muted">Quantity: 2</small>
+													<small className="text-muted">Quantity: {good.num}</small>
 												</p>
 											</div>
 										</div>
