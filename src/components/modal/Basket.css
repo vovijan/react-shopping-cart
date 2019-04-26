@@ -9,6 +9,11 @@
     background-size: cover;
 }
 
+.ul__style {
+    width: 500px;
+    height: auto;
+}
+
 .li__row {
     width: 100%;
     display: flex;
@@ -25,4 +30,8 @@
     color: white;
     background-color: red;
     border-radius: 5px;
+}
+
+.price__color {
+    color: red;
 }

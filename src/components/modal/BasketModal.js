@@ -4,10 +4,13 @@ import './Basket.css';
 
 export default class BasketModal extends React.Component {
 	render() {
+		const arr = this.props.goods.map(good => good.price);
+		console.log(arr);
+		const result = arr.reduce((sum, current) => sum + current, 0);
 		return (
 			<>
 				<h1 style={{textAlign: 'center'}}>Cart</h1>
-				<ul>
+				<ul className='ul__style'>
 					{
 						this.props.goods.map(good => {
 							return <li key={good.id} className='li__row'>
@@ -37,7 +40,7 @@ export default class BasketModal extends React.Component {
 				</ul>
 				<p>
 					<span>SUBTOTAL: </span>
-					<span>$590</span>
+					<span className='price__color'>${result}</span>
 				</p>
 				<button className="btn btn-outline-success btn-lg btn-block">CHECKOUT</button>
 			</>

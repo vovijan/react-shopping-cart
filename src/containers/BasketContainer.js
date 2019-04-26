@@ -8,8 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-	deleteToCart: (id, pic, name, price, company, num) => {
-		dispatch(deleteToCart({id, pic, name, price, company, num}));
+	deleteToCart: (id) => {
+		dispatch(deleteToCart({id}));
 	}
 });
 
