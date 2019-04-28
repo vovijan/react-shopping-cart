@@ -1,4 +1,9 @@
-import {ADD_TO_CART, DELETE_TO_CART} from "./constants";
+import {
+  ADD_TO_CART,
+  DELETE_TO_CART,
+  IN_STOCK,
+  OUT_STOCK
+} from "./constants";
 import {data} from './data';
 
 const initialState = data;
@@ -43,6 +48,16 @@ export const reducer = (state = initialState, action) => {
 				...state,
 				cart: state.cart.filter(item => item.id !== action.payload.id)
 			};
+    case IN_STOCK:
+			return {
+			  ...state,
+			  goods: state.goods.filter(item => item.inStock)
+			};
+    case OUT_STOCK:
+      return {
+        ...state,
+        goods: state.goods.filter(item => !item.inStock)
+      };
 		default:
 			return state;
 	}

@@ -13,7 +13,11 @@ const mapDispatchToProps = dispatch => ({
 	}
 });
 
-const ProductListContainer = ({ products, addToCart }) => <ProductList products={products} addToCart={addToCart} />;
+const ProductListContainer = ({ products, addToCart }) =>
+	<ProductList
+		products={products}
+		addToCart={addToCart}
+	/>;
 
 export default connect(
 	mapStateToProps,

@@ -28,8 +28,8 @@ const Sidebar = (props) => {
 			<div className="card border-secondary mb-3" style={{maxWidth: '25rem'}}>
 				<div className="card-header">Stock</div>
 				<div className="btn-group-vertical" role="group" aria-label="Basic example">
-					<button className="btn btn-light">In Stock</button>
-					<button className="btn btn-light">Out Stock</button>
+					<button className="btn btn-light" onClick={props.inStock}>In Stock</button>
+					<button className="btn btn-light" onClick={props.outStock}>Out Stock</button>
 				</div>
 			</div>
 		</div>
