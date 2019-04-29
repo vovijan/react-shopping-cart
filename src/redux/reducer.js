@@ -1,9 +1,10 @@
 import {
-  ADD_TO_CART,
-  DELETE_TO_CART,
-  IN_STOCK,
-  OUT_STOCK,
-	NAME_COMPANY_FILTER
+	ADD_TO_CART,
+	DELETE_TO_CART,
+	A_Z, Z_A,
+	IN_STOCK,
+	OUT_STOCK,
+	NAME_COMPANY_FILTER,
 } from "./constants";
 import { data } from './data';
 
@@ -49,6 +50,16 @@ export const reducer = (state = initialState, action) => {
 				...state,
 				cart: state.cart.filter(item => item.id !== action.payload.id)
 			};
+		case A_Z:
+			return {
+				...state,
+				filter: "aZ"
+			};
+		case Z_A:
+			return {
+				...state,
+				filter: "zA"
+			};
     case IN_STOCK:
 			return {
 			  ...state,
@@ -62,7 +73,7 @@ export const reducer = (state = initialState, action) => {
 		case NAME_COMPANY_FILTER:
 			return {
 				...state,
-				filter: "nameCompany"
+				filter: action.payload.name
 			};
 		default:
 			return state;

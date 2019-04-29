@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Sidebar from '../components/sidebar/Sidebar';
-import { inStock, outStock, nameCompanyFilter } from "../redux/actions";
+import { aZ, zA, inStock, outStock, nameCompanyFilter } from "../redux/actions";
 
 const mapStateToProps = state => {
 
@@ -28,20 +28,34 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
+
+	aZ: () => {
+		dispatch(aZ());
+	},
+
+	zA: () => {
+		dispatch(zA());
+	},
+
 	inStock: () => {
 		dispatch(inStock());
 	},
+
   outStock: () => {
 	  dispatch(outStock());
   },
-	nameCompanyFilter: (company) => {
-		dispatch(nameCompanyFilter({company}));
+
+	nameCompanyFilter: (names) => {
+		dispatch(nameCompanyFilter({names}));
 	}
+
 });
 
-const SidebarContainer = ({ nameCompany, inStock, outStock, nameCompanyFilter }) =>
+const SidebarContainer = ({ nameCompany, inStock, outStock, nameCompanyFilter, aZ, zA }) =>
   <Sidebar
     nameCompany={nameCompany}
+		aZ={aZ}
+		zA={zA}
     inStock={inStock}
     outStock={outStock}
 		nameCompanyFilter={nameCompanyFilter}

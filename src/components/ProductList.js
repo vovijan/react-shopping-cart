@@ -3,16 +3,16 @@ import ListItem from "./ListItem";
 
 import './styleComponents.css';
 
-const ProductList = (props) => {
+const ProductList = ({ products, addToCart }) => {
 	return (
 		<>
 			<ul>
 				{
-					props.products.map(product => {
+					products.map(product => {
 						return <ListItem
 										key={product.id}
 										products={product}
-										addToCart={props.addToCart}
+										addToCart={addToCart}
 									/>
 					})
 				}

@@ -5,6 +5,30 @@ import {addToCart} from "../redux/actions";
 
 const mapStateToProps = state => {
 	switch (state.filter) {
+		case "aZ":
+			return {
+				products: [...state.goods].sort((first, second) => {
+					const nameA = first.name.toLowerCase();
+					const nameB = second.name.toLowerCase();
+					console.log(nameA);
+					if (nameA < nameB) {
+						return -1;
+					}
+					return 0;
+				})
+			};
+		case "zA":
+			return {
+				products: [...state.goods].sort((first, second) => {
+					const nameA = first.name.toLowerCase();
+					const nameB = second.name.toLowerCase();
+					console.log(nameA);
+					if (nameA > nameB) {
+						return -1;
+					}
+					return 0;
+				})
+			};
 		case "inStock":
 			return {
 				products: state.goods.filter(item => item.inStock)
