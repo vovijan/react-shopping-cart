@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Sidebar from '../components/sidebar/Sidebar';
 import { inStock, outStock } from "../redux/actions";
 
-const mapStateToProps = state => {
+const mapStateToProps = state => ({
 
 	/*const nameCompany = [];
 
@@ -19,13 +19,13 @@ const mapStateToProps = state => {
 
 	return {nameCompany};*/
 
-	//nameCompany: state.goods
+	nameCompany: state.goods
 
-  const nameCompany = state.goods.filter(item => item.inStock);
+ // const nameCompany = state.goods.filter(item => item.inStock);
 
-  return {nameCompany};
+  //return {nameCompany};
 
-};
+});
 
 const mapDispatchToProps = dispatch => ({
 	inStock: () => {

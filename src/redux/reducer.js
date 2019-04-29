@@ -51,7 +51,7 @@ export const reducer = (state = initialState, action) => {
     case IN_STOCK:
 			return {
 			  ...state,
-			  goods: state.goods.filter(item => item.inStock)
+			  filter: "inStock"
 			};
     case OUT_STOCK:
       return {

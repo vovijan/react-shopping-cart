@@ -273,5 +273,8 @@ export const data = {
 	],
 	cart: [
 
-	]
+	],
+
+	filter: "",
+	sort: ""
 };

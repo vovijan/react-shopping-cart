@@ -3,9 +3,16 @@ import { connect } from 'react-redux';
 import ProductList from '../components/ProductList';
 import {addToCart} from "../redux/actions";
 
-const mapStateToProps = state => ({
-	products: state.goods
-});
+const mapStateToProps = state => {
+	switch (state.filter) {
+		case "inStock":
+			return {
+				products: state.goods.filter(item => item.inStock)
+			}
+		default:
+			return {products: state.goods}
+	}
+};
 
 const mapDispatchToProps = dispatch => ({
 	addToCart: (id, pic, name, price, company, num) => {
