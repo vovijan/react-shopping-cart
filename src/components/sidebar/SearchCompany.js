@@ -2,10 +2,15 @@ import React from 'react';
 
 import '../styleComponents.css';
 
-const SearchCompany = (props) => {
+const SearchCompany = ({ names, nameCompanyFilter }) => {
 	return (
 		<>
-			<button className="btn btn-light">{props.names}</button>
+			<button
+				className="btn btn-light"
+				onClick={() => nameCompanyFilter(names)}
+			>
+				{names}
+			</button>
 		</>
 	)
 };

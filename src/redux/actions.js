@@ -2,7 +2,8 @@ import {
   ADD_TO_CART,
   DELETE_TO_CART,
   IN_STOCK,
-  OUT_STOCK
+  OUT_STOCK,
+  NAME_COMPANY_FILTER
 } from './constants';
 
 export const addToCart = payload => ({
@@ -22,5 +23,10 @@ export const inStock = payload => ({
 
 export const outStock = payload => ({
   type: OUT_STOCK,
+  payload
+});
+
+export const nameCompanyFilter = payload => ({
+  type: NAME_COMPANY_FILTER,
   payload
 });

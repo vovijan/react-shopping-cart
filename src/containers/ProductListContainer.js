@@ -8,7 +8,11 @@ const mapStateToProps = state => {
 		case "inStock":
 			return {
 				products: state.goods.filter(item => item.inStock)
-			}
+			};
+		case "outStock":
+			return {
+				products: state.goods.filter(item => !item.inStock)
+			};
 		default:
 			return {products: state.goods}
 	}

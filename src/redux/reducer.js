@@ -2,9 +2,10 @@ import {
   ADD_TO_CART,
   DELETE_TO_CART,
   IN_STOCK,
-  OUT_STOCK
+  OUT_STOCK,
+	NAME_COMPANY_FILTER
 } from "./constants";
-import {data} from './data';
+import { data } from './data';
 
 const initialState = data;
 
@@ -56,8 +57,13 @@ export const reducer = (state = initialState, action) => {
     case OUT_STOCK:
       return {
         ...state,
-        goods: state.goods.filter(item => !item.inStock)
+				filter: "outStock"
       };
+		case NAME_COMPANY_FILTER:
+			return {
+				...state,
+				filter: "nameCompany"
+			};
 		default:
 			return state;
 	}

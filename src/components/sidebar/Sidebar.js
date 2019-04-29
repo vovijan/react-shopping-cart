@@ -1,9 +1,9 @@
 import React from 'react';
-
-import '../styleComponents.css';
 import SearchCompany from "./SearchCompany";
 
-const Sidebar = (props) => {
+import '../styleComponents.css';
+
+const Sidebar = ({ nameCompany, inStock, outStock }) => {
 	return (
 		<div className="sidebar">
 			<div className="card border-secondary mb-3" style={{maxWidth: '25rem'}}>
@@ -18,8 +18,12 @@ const Sidebar = (props) => {
 				<div className="card-header">Company Name</div>
 				<div className="btn-group-vertical" role="group" aria-label="Basic example">
 					{
-						props.nameCompany.map(item => {
-							return <SearchCompany key={item.id} names={item.company} />
+						nameCompany.map(({ id, company, nameCompanyFilter}) => {
+							return <SearchCompany
+											key={id}
+											names={company}
+											nameCompanyFilter={nameCompanyFilter}
+										/>
 						})
 					}
 				</div>
@@ -28,8 +32,18 @@ const Sidebar = (props) => {
 			<div className="card border-secondary mb-3" style={{maxWidth: '25rem'}}>
 				<div className="card-header">Stock</div>
 				<div className="btn-group-vertical" role="group" aria-label="Basic example">
-					<button className="btn btn-light" onClick={props.inStock}>In Stock</button>
-					<button className="btn btn-light" onClick={props.outStock}>Out Stock</button>
+					<button
+						className="btn btn-light"
+						onClick={inStock}
+					>
+						In Stock
+					</button>
+					<button
+						className="btn btn-light"
+						onClick={outStock}
+					>
+						Out Stock
+					</button>
 				</div>
 			</div>
 		</div>
