@@ -33,7 +33,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/food",
 			"color": "orchid",
 			"price": 423,
-			"company": "Hauck - Kunze",
+			"company": "Hammes Group",
 			"inStock": false
 		},
 		{
@@ -60,7 +60,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/animals",
 			"color": "turquoise",
 			"price": 475,
-			"company": "Towne and Sons",
+			"company": "Hammes Group",
 			"inStock": true
 		},
 		{
@@ -78,7 +78,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/people",
 			"color": "fuchsia",
 			"price": 91,
-			"company": "Champlin Group",
+			"company": "Hammes Group",
 			"inStock": false
 		},
 		{
@@ -87,7 +87,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/fashion",
 			"color": "plum",
 			"price": 749,
-			"company": "McCullough LLC",
+			"company": "Bartoletti and Sons",
 			"inStock": true
 		},
 		{
@@ -96,7 +96,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/cats",
 			"color": "blue",
 			"price": 356,
-			"company": "Hammes Group",
+			"company": "Dicki - Langosh",
 			"inStock": true
 		},
 		{
@@ -105,7 +105,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/fashion",
 			"color": "red",
 			"price": 946,
-			"company": "Cummings - Schmeler",
+			"company": "Bartoletti and Sons",
 			"inStock": false
 		},
 		{
@@ -123,7 +123,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/nature",
 			"color": "indigo",
 			"price": 245,
-			"company": "Hammes Group",
+			"company": "Dicki - Langosh",
 			"inStock": true
 		},
 		{
@@ -132,7 +132,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/cats",
 			"color": "turquoise",
 			"price": 1,
-			"company": "Stark - Haley",
+			"company": "Hammes Group",
 			"inStock": false
 		},
 		{
@@ -159,7 +159,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/business",
 			"color": "plum",
 			"price": 774,
-			"company": "Champlin, O'Connell and Wisozk",
+			"company": "Hammes Group",
 			"inStock": true
 		},
 		{
@@ -177,7 +177,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/city",
 			"color": "magenta",
 			"price": 991,
-			"company": "Huels - Effertz",
+			"company": "Bartoletti and Sons",
 			"inStock": false
 		},
 		{
@@ -195,7 +195,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/abstract",
 			"color": "violet",
 			"price": 646,
-			"company": "Bartoletti and Sons",
+			"company": "Koelpin Group",
 			"inStock": false
 		},
 		{
@@ -213,7 +213,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/animals",
 			"color": "teal",
 			"price": 375,
-			"company": "Bednar - Block",
+			"company": "Bartoletti and Sons",
 			"inStock": true
 		},
 		{
@@ -222,7 +222,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/people",
 			"color": "lavender",
 			"price": 950,
-			"company": "Bartoletti and Sons",
+			"company": "Koelpin Group",
 			"inStock": false
 		},
 		{
@@ -231,7 +231,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/technics",
 			"color": "plum",
 			"price": 163,
-			"company": "Padberg, Hayes and Herzog",
+			"company": "Koelpin Group",
 			"inStock": false
 		},
 		{
@@ -249,7 +249,7 @@ export const data = {
 			"pic": "http://lorempixel.com/640/480/business",
 			"color": "red",
 			"price": 611,
-			"company": "Muller LLC",
+			"company": "Bartoletti and Sons",
 			"inStock": true
 		},
 		{
@@ -273,5 +273,7 @@ export const data = {
 	],
 	cart: [
 
-	]
+	],
+	filter: "",
+	sort: ""
 };

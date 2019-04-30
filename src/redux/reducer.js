@@ -1,10 +1,12 @@
 import {
-  ADD_TO_CART,
-  DELETE_TO_CART,
-  IN_STOCK,
-  OUT_STOCK
+	ADD_TO_CART,
+	DELETE_TO_CART,
+	A_Z, Z_A,
+	IN_STOCK,
+	OUT_STOCK,
+	NAME_COMPANY_FILTER,
 } from "./constants";
-import {data} from './data';
+import { data } from './data';
 
 const initialState = data;
 
@@ -48,16 +50,31 @@ export const reducer = (state = initialState, action) => {
 				...state,
 				cart: state.cart.filter(item => item.id !== action.payload.id)
 			};
+		case A_Z:
+			return {
+				...state,
+				filter: "aZ"
+			};
+		case Z_A:
+			return {
+				...state,
+				filter: "zA"
+			};
     case IN_STOCK:
 			return {
 			  ...state,
-			  goods: state.goods.filter(item => item.inStock)
+			  filter: "inStock"
 			};
     case OUT_STOCK:
       return {
         ...state,
-        goods: state.goods.filter(item => !item.inStock)
+				filter: "outStock"
       };
+		case NAME_COMPANY_FILTER:
+			return {
+				...state,
+				filter: action.payload.names
+			};
 		default:
 			return state;
 	}
