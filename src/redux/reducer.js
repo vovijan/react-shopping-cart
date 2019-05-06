@@ -53,22 +53,22 @@ export const reducer = (state = initialState, action) => {
 		case A_Z:
 			return {
 				...state,
-				filter: "aZ"
+				sort: "aZ"
 			};
 		case Z_A:
 			return {
 				...state,
-				filter: "zA"
+				sort: "zA"
 			};
     case IN_STOCK:
 			return {
 			  ...state,
-			  filter: "inStock"
+				sort: "inStock"
 			};
     case OUT_STOCK:
       return {
         ...state,
-				filter: "outStock"
+	      sort: "outStock"
       };
 		case NAME_COMPANY_FILTER:
 			return {

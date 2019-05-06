@@ -1,7 +1,7 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import ProductList from '../components/ProductList';
-import {addToCart} from "../redux/actions";
+import React          from 'react';
+import { connect }    from 'react-redux';
+import ProductList    from '../components/ProductList';
+import { addToCart }  from "../redux/actions";
 
 const mapStateToProps = state => {
 
@@ -27,7 +27,7 @@ const mapStateToProps = state => {
 	};*/
 
 	switch (state.filter) {
-		case "aZ":
+		/*case "aZ":
 			return {
 				products: [...state.goods].sort((first, second) => {
 					const nameA = first.name.toLowerCase();
@@ -54,12 +54,45 @@ const mapStateToProps = state => {
 		case "Champlin Group":
 			return {
 				products: state.goods.filter(item => item.company === state.filter)
-			};
-		case "Hammes Group":
+			};*/
+		case state.filter:
+			if (state.sort === 'aZ') {
 			return {
-				products: state.goods.filter(item => item.company === state.filter)
-			};
-		case "Howell, Quigley and Rosenbaum":
+				products: state.goods.filter(item => item.company === state.filter).sort((first, second) => {
+					const nameA = first.name.toLowerCase();
+					const nameB = second.name.toLowerCase();
+					console.log(nameA);
+					if (nameA < nameB) {
+						return -1;
+					}
+					return 0;
+				})
+			}} else if (state.sort === 'zA') {
+				return {
+					products: state.goods.filter(item => item.company === state.filter).sort((first, second) => {
+						const nameA = first.name.toLowerCase();
+						const nameB = second.name.toLowerCase();
+						console.log(nameA);
+						if (nameA > nameB) {
+							return -1;
+						}
+						return 0;
+					})
+				}
+			} else if (state.sort === 'inStock') {
+				return {
+					products: state.goods.filter(item => item.company === state.filter).filter(item => item.inStock)
+				}
+			} else if (state.sort === 'outStock') {
+				return {
+					products: state.goods.filter(item => item.company === state.filter).filter(item => !item.inStock)
+				}
+			} else {
+				return {
+					products: state.goods
+				}
+			}
+		/*case "Howell, Quigley and Rosenbaum":
 			return {
 				products: state.goods.filter(item => item.company === state.filter)
 			};
@@ -78,17 +111,11 @@ const mapStateToProps = state => {
 		case "Koelpin Group":
 			return {
 				products: state.goods.filter(item => item.company === state.filter)
-			};
-		case "inStock":
-			return {
-				products: state.goods.filter(item => item.inStock)
-			};
-		case "outStock":
-			return {
-				products: state.goods.filter(item => !item.inStock)
-			};
+			};*/
 		default:
-			return {products: state.goods}
+			return {
+				products: state.goods
+			}
 	}
 };
 
