@@ -1,123 +1,14 @@
-import React          from 'react';
-import { connect }    from 'react-redux';
-import ProductList    from '../components/ProductList';
-import { addToCart }  from "../redux/actions";
+import React                        from 'react';
+import { connect }                  from 'react-redux';
+import ProductList                  from '../components/ProductList';
+import { addToCart }                from "../redux/actions";
+import { applyFilter, getSortFunc } from '../functions/SortFilter';
 
-const mapStateToProps = state => {
+const mapStateToProps = state => ({
 
-	/*let products = state.goods.sort((first, second) => {
-		const nameA = first.name.toLowerCase();
-		const nameB = second.name.toLowerCase();
+	products: applyFilter(state.goods, state.filter).sort(getSortFunc(state.sort))
 
-		switch (state.sort) {
-			case "aZ":
-				if (nameA < nameB) {
-					return -1;
-				}
-				return 0;
-			default:
-				if (nameA > nameB) {
-					return -1;
-				}
-				return 0;
-		}
-	}).filter(item => item.company === state.filter);
-	return {
-		products
-	};*/
-
-	switch (state.filter) {
-		/*case "aZ":
-			return {
-				products: [...state.goods].sort((first, second) => {
-					const nameA = first.name.toLowerCase();
-					const nameB = second.name.toLowerCase();
-					console.log(nameA);
-					if (nameA < nameB) {
-						return -1;
-					}
-					return 0;
-				})
-			};
-		case "zA":
-			return {
-				products: [...state.goods].sort((first, second) => {
-					const nameA = first.name.toLowerCase();
-					const nameB = second.name.toLowerCase();
-					console.log(nameA);
-					if (nameA > nameB) {
-						return -1;
-					}
-					return 0;
-				})
-			};
-		case "Champlin Group":
-			return {
-				products: state.goods.filter(item => item.company === state.filter)
-			};*/
-		case state.filter:
-			if (state.sort === 'aZ') {
-			return {
-				products: state.goods.filter(item => item.company === state.filter).sort((first, second) => {
-					const nameA = first.name.toLowerCase();
-					const nameB = second.name.toLowerCase();
-					console.log(nameA);
-					if (nameA < nameB) {
-						return -1;
-					}
-					return 0;
-				})
-			}} else if (state.sort === 'zA') {
-				return {
-					products: state.goods.filter(item => item.company === state.filter).sort((first, second) => {
-						const nameA = first.name.toLowerCase();
-						const nameB = second.name.toLowerCase();
-						console.log(nameA);
-						if (nameA > nameB) {
-							return -1;
-						}
-						return 0;
-					})
-				}
-			} else if (state.sort === 'inStock') {
-				return {
-					products: state.goods.filter(item => item.company === state.filter).filter(item => item.inStock)
-				}
-			} else if (state.sort === 'outStock') {
-				return {
-					products: state.goods.filter(item => item.company === state.filter).filter(item => !item.inStock)
-				}
-			} else {
-				return {
-					products: state.goods
-				}
-			}
-		/*case "Howell, Quigley and Rosenbaum":
-			return {
-				products: state.goods.filter(item => item.company === state.filter)
-			};
-		case "Dicki - Langosh":
-			return {
-				products: state.goods.filter(item => item.company === state.filter)
-			};
-		case "Bartoletti and Sons":
-			return {
-				products: state.goods.filter(item => item.company === state.filter)
-			};
-		case "Heathcote and Sons":
-			return {
-				products: state.goods.filter(item => item.company === state.filter)
-			};
-		case "Koelpin Group":
-			return {
-				products: state.goods.filter(item => item.company === state.filter)
-			};*/
-		default:
-			return {
-				products: state.goods
-			}
-	}
-};
+});
 
 const mapDispatchToProps = dispatch => ({
 	addToCart: (id, pic, name, price, company, num) => {

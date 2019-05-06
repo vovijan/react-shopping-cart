@@ -6,8 +6,23 @@ export function applyFilter(data, company) {
 
 export function getSortFunc(direction) {
 	switch (direction) {
-		case 'A-z': return (a, b) => {};
-		case 'z-A': return (a, b) => {};
+		case 'aZ': return (first, second) => {
+			const nameA = first.name.toLowerCase();
+			const nameB = second.name.toLowerCase();
+			console.log(nameA);
+			if (nameA < nameB) {
+				return -1;
+			}
+			return 0;
+		};
+		case 'zA': return (first, second) => {
+			const nameA = first.name.toLowerCase();
+			const nameB = second.name.toLowerCase();
+			console.log(nameA);
+			if (nameA > nameB) {
+				return -1;
+			}
+			return 0;};
 		default: return () => 0;
 	}
 }
