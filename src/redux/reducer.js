@@ -63,17 +63,17 @@ export const reducer = (state = initialState, action) => {
     case IN_STOCK:
 			return {
 			  ...state,
-				sort: "inStock"
+				filter: "inStock"
 			};
     case OUT_STOCK:
       return {
         ...state,
-	      sort: "outStock"
+	      filter: "outStock"
       };
 		case NAME_COMPANY_FILTER:
 			return {
 				...state,
-				filter: action.payload.names
+				filterByCompany: action.payload.names
 			};
 		default:
 			return state;

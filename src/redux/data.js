@@ -274,6 +274,7 @@ export const data = {
 	cart: [
 
 	],
-	filter: "",
-	sort: ""
+	filterByCompany: "",
+	sort: "",
+	inStock: ""
 };
