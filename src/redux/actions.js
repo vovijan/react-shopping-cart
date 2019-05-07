@@ -5,7 +5,8 @@ import {
   Z_A,
   IN_STOCK,
   OUT_STOCK,
-  NAME_COMPANY_FILTER
+  NAME_COMPANY_FILTER,
+	RESET_FILTER
 } from './constants';
 
 export const addToCart = payload => ({
@@ -41,4 +42,9 @@ export const outStock = payload => ({
 export const nameCompanyFilter = payload => ({
   type: NAME_COMPANY_FILTER,
   payload
+});
+
+export const resetFilter = payload => ({
+	type: RESET_FILTER,
+	payload
 });

@@ -1,3 +1,8 @@
+/*export const applyFilter = (data, company, stock) => {
+	return data.filter(item => company === 'all' || item.company === company).filter(item => stock === 'all' || item.inStock === stock)
+	// return data.filter(item => company ? item.company === company : );
+}*/
+
 export const applyFilter = (data, company) => {
 	if (!company) return data;
 
@@ -28,3 +33,5 @@ export const getSortFunc = (direction) => {
 			return () => 0;
 	}
 };
+
+//export const filterStock = ()

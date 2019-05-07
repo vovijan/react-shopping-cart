@@ -4,14 +4,17 @@ import SearchCompany from "./SearchCompany";
 import '../styleComponents.css';
 
 export default class Sidebar extends Component {
+
 	state = {
 		isActive: false
 	};
+
 	handleClick = () => {
 		this.setState({
 			isActive: true
 		})
 	};
+
 	render() {
 		return (
 			<div className="sidebar">
@@ -69,6 +72,13 @@ export default class Sidebar extends Component {
 									</button>
 								</div>
 							</div>
+
+							<button
+								className="btn btn-outline-danger btn-block"
+								onClick={ this.props.resetFilter }
+							>
+								Reset filter
+							</button>
 						</> : null
 				}
 			</div>
