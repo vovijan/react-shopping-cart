@@ -81,19 +81,19 @@ export const reducer = (state = initialState, action) => {
 		case RESET_STOCK:
 			return {
 				...state,
-				inStock: ''
+				inStock: action.payload
 			};
 		case RESET_SORT:
 			return {
 				...state,
-				sort: ''
+				sort: action.payload
 			};
 		case RESET_ALL:
 			return {
 				...state,
-				filterByCompany: '',
-				sort: '',
-				inStock: ''
+				filterByCompany: action.payload,
+				sort: action.payload,
+				inStock: action.payload
 			};
 		default:
 			return state;

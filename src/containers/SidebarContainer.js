@@ -53,15 +53,15 @@ const mapDispatchToProps = dispatch => ({
 	},
 
 	resetStock: () => {
-		dispatch(resetStock());
+		dispatch(resetStock(''));
 	},
 
 	resetSort: () => {
-		dispatch(resetSort());
+		dispatch(resetSort(''));
 	},
 
 	resetAll: () => {
-		dispatch(resetAll());
+		dispatch(resetAll(''));
 	}
 
 });
