@@ -2,14 +2,14 @@ import React from 'react';
 
 import '../styleComponents.css';
 
-const SearchCompany = ({ names, nameCompanyFilter }) => {
+const SearchCompany = ({ names, nameCompanyFilter, selected, id, handleClick }) => {
 	return (
 		<>
 			<button
-				className="btn btn-light"
-				onClick={() => nameCompanyFilter(names)}
+				className={`btn btn-light ${selected === id ? 'active' : null}`}
+				onClick={() => { handleClick(id, names) }}
 			>
-				{ names }
+				{names}
 			</button>
 		</>
 	)

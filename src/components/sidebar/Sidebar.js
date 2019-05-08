@@ -6,12 +6,16 @@ import '../styleComponents.css';
 export default class Sidebar extends Component {
 
 	state = {
-		isActive: false
+		isActive: false,
+		selected: null
 	};
 
-	handleClick = () => {
+	handleClick = (id, names) => {
+		this.props.nameCompanyFilter(names);
+
 		this.setState({
-			isActive: true
+			isActive: true,
+			selected: id
 		})
 	};
 
@@ -25,81 +29,76 @@ export default class Sidebar extends Component {
 	render() {
 		return (
 			<div className="sidebar">
-				<div className="card border-secondary mb-3" style={{maxWidth: '25rem'}}>
+				<div className="card border-secondary mb-3">
 					<div className="card-header">Company Name</div>
-					<div className="btn-group-vertical" role="group" aria-label="Basic example" onClick={this.handleClick}>
+					<div className="btn-group-vertical" role="group" aria-label="Basic example">
 						{
 							this.props.nameCompany.map((item) => {
-								return <SearchCompany
-									key={item.id}
-									names={item.company}
-									nameCompanyFilter={this.props.nameCompanyFilter}
-
+								return <SearchCompany key={item.id}
+								                      id={item.id}
+								                      selected={this.state.selected}
+								                      names={item.company}
+								                      handleClick={this.handleClick}
 								/>
 							})
 						}
 					</div>
 				</div>
 
-				{
-					this.state.isActive ?
-						<>
-							<div className="card border-light mb-3" style={{maxWidth: '25rem'}}>
-								<div className="card-header">Stock</div>
-								<div className="btn-group-vertical" role="group" aria-label="Basic example">
-									<button
-										className="btn btn-light"
-										onClick={this.props.inStock}
-									>
-										In Stock
-									</button>
-									<button
-										className="btn btn-light"
-										onClick={this.props.outStock}
-									>
-										Out Stock
-									</button>
-									<button
-										className="btn btn-outline-danger"
-										onClick={this.props.resetStock}
-									>
-										Reset
-									</button>
-								</div>
-							</div>
+				<div className="card border-light mb-3">
+					<div className="card-header">Stock</div>
+					<div className="btn-group-vertical" role="group" aria-label="Basic example">
+						<button
+							className="btn btn-light"
+							onClick={this.props.inStock}
+						>
+							In Stock
+						</button>
+						<button
+							className="btn btn-light"
+							onClick={this.props.outStock}
+						>
+							Out Stock
+						</button>
+						<button
+							className="btn btn-outline-danger"
+							onClick={this.props.resetStock}
+						>
+							Reset
+						</button>
+					</div>
+				</div>
 
-							<div className="card border-light mb-3" style={{maxWidth: '25rem'}}>
-								<div className="card-header">Sort alphabetically</div>
-								<div className="btn-group-vertical" role="group" aria-label="Basic example">
-									<button
-										className="btn btn-light"
-										onClick={this.props.aZ}
-									>
-										A-Z
-									</button>
-									<button
-										className="btn btn-light"
-										onClick={this.props.zA}
-									>
-										Z-A
-									</button>
-									<button
-										className="btn btn-outline-danger"
-										onClick={this.props.resetSort}
-									>
-										Reset
-									</button>
-								</div>
-							</div>
+				<div className="card border-light mb-3">
+					<div className="card-header">Sort alphabetically</div>
+					<div className="btn-group-vertical" role="group" aria-label="Basic example">
+						<button
+							className="btn btn-light"
+							onClick={this.props.aZ}
+						>
+							A-Z
+						</button>
+						<button
+							className="btn btn-light"
+							onClick={this.props.zA}
+						>
+							Z-A
+						</button>
+						<button
+							className="btn btn-outline-danger"
+							onClick={this.props.resetSort}
+						>
+							Reset
+						</button>
+					</div>
+				</div>
 
-							<button
-								className="btn btn-danger btn-block"
-								onClick={ this.onClick }
-							>
-								Reset all
-							</button>
-						</> : null
-				}
+				<button
+					className="btn btn-danger btn-block"
+					onClick={this.onClick}
+				>
+					Reset all
+				</button>
 			</div>
 		)
 	}
