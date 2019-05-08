@@ -15,6 +15,13 @@ export default class Sidebar extends Component {
 		})
 	};
 
+	onClick = () => {
+		this.props.resetFilter();
+		this.setState({
+			isActive: false
+		})
+	};
+
 	render() {
 		return (
 			<div className="sidebar">
@@ -75,7 +82,7 @@ export default class Sidebar extends Component {
 
 							<button
 								className="btn btn-outline-danger btn-block"
-								onClick={ this.props.resetFilter }
+								onClick={ this.onClick }
 							>
 								Reset filter
 							</button>
