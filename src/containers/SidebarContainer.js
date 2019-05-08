@@ -66,7 +66,18 @@ const mapDispatchToProps = dispatch => ({
 
 });
 
-const SidebarContainer = ({ nameCompany, inStock, outStock, nameCompanyFilter, aZ, zA, resetStock, resetSort, resetAll }) =>
+const SidebarContainer = (
+	{
+		nameCompany,
+		inStock,
+		outStock,
+		nameCompanyFilter,
+		aZ,
+		zA,
+		resetStock,
+		resetSort,
+		resetAll
+	}) =>
   <Sidebar
     nameCompany={nameCompany}
 		aZ={aZ}

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import SearchCompany from "./SearchCompany";
+import SearchCompany        from "./SearchCompany";
+import FilterStock          from "./FilterStock";
 
 import '../styleComponents.css';
+import SortProductList from "./SortProductList";
 
 export default class Sidebar extends Component {
 
@@ -45,53 +47,17 @@ export default class Sidebar extends Component {
 					</div>
 				</div>
 
-				<div className="card border-light mb-3">
-					<div className="card-header">Stock</div>
-					<div className="btn-group-vertical" role="group" aria-label="Basic example">
-						<button
-							className="btn btn-light"
-							onClick={this.props.inStock}
-						>
-							In Stock
-						</button>
-						<button
-							className="btn btn-light"
-							onClick={this.props.outStock}
-						>
-							Out Stock
-						</button>
-						<button
-							className="btn btn-outline-danger"
-							onClick={this.props.resetStock}
-						>
-							Reset
-						</button>
-					</div>
-				</div>
+				<FilterStock
+					inStock     ={this.props.inStock}
+					outStock    ={this.props.outStock}
+					resetStock  ={this.props.resetStock}
+				/>
 
-				<div className="card border-light mb-3">
-					<div className="card-header">Sort alphabetically</div>
-					<div className="btn-group-vertical" role="group" aria-label="Basic example">
-						<button
-							className="btn btn-light"
-							onClick={this.props.aZ}
-						>
-							A-Z
-						</button>
-						<button
-							className="btn btn-light"
-							onClick={this.props.zA}
-						>
-							Z-A
-						</button>
-						<button
-							className="btn btn-outline-danger"
-							onClick={this.props.resetSort}
-						>
-							Reset
-						</button>
-					</div>
-				</div>
+				<SortProductList
+					aZ         ={this.props.aZ}
+					zA         ={this.props.zA}
+					resetSort  ={this.props.resetSort}
+				/>
 
 				<button
 					className="btn btn-danger btn-block"

@@ -9,7 +9,7 @@ const SearchCompany = ({ names, nameCompanyFilter, selected, id, handleClick }) 
 				className={`btn btn-light ${selected === id ? 'active' : null}`}
 				onClick={() => { handleClick(id, names) }}
 			>
-				{names}
+				{ names }
 			</button>
 		</>
 	)
