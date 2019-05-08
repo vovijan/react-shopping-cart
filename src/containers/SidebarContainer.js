@@ -7,7 +7,9 @@ import {
 	inStock,
 	outStock,
 	nameCompanyFilter,
-	resetFilter
+	resetStock,
+	resetSort,
+	resetAll
 } from "../redux/actions";
 
 const mapStateToProps = state => {
@@ -50,13 +52,21 @@ const mapDispatchToProps = dispatch => ({
 		dispatch(nameCompanyFilter({names}));
 	},
 
-	resetFilter: () => {
-		dispatch(resetFilter());
+	resetStock: () => {
+		dispatch(resetStock());
+	},
+
+	resetSort: () => {
+		dispatch(resetSort());
+	},
+
+	resetAll: () => {
+		dispatch(resetAll());
 	}
 
 });
 
-const SidebarContainer = ({ nameCompany, inStock, outStock, nameCompanyFilter, aZ, zA, resetFilter }) =>
+const SidebarContainer = ({ nameCompany, inStock, outStock, nameCompanyFilter, aZ, zA, resetStock, resetSort, resetAll }) =>
   <Sidebar
     nameCompany={nameCompany}
 		aZ={aZ}
@@ -64,7 +74,9 @@ const SidebarContainer = ({ nameCompany, inStock, outStock, nameCompanyFilter, a
     inStock={inStock}
     outStock={outStock}
 		nameCompanyFilter={nameCompanyFilter}
-    resetFilter={resetFilter}
+    resetStock={resetStock}
+    resetSort={resetSort}
+    resetAll={resetAll}
   />;
 
 export default connect(

@@ -5,7 +5,9 @@ import {
 	IN_STOCK,
 	OUT_STOCK,
 	NAME_COMPANY_FILTER,
-	RESET_FILTER
+	RESET_SORT,
+	RESET_STOCK,
+	RESET_ALL
 } from "./constants";
 import { data } from './data';
 
@@ -64,19 +66,29 @@ export const reducer = (state = initialState, action) => {
     case IN_STOCK:
 			return {
 			  ...state,
-				inStock: "inStock"
+				inStock: true
 			};
     case OUT_STOCK:
       return {
         ...state,
-	      inStock: "outStock"
+	      inStock: false
       };
 		case NAME_COMPANY_FILTER:
 			return {
 				...state,
 				filterByCompany: action.payload.names
 			};
-		case RESET_FILTER:
+		case RESET_STOCK:
+			return {
+				...state,
+				inStock: ''
+			};
+		case RESET_SORT:
+			return {
+				...state,
+				sort: ''
+			};
+		case RESET_ALL:
 			return {
 				...state,
 				filterByCompany: '',

@@ -5,4 +5,6 @@ export const Z_A                   = 'Z_A';
 export const IN_STOCK              = 'IN_STOCK';
 export const OUT_STOCK             = 'OUT_STOCK';
 export const NAME_COMPANY_FILTER   = 'NAME_COMPANY_FILTER';
-export const RESET_FILTER          = 'RESET_FILTER';
+export const RESET_STOCK           = 'RESET_STOCK';
+export const RESET_SORT            = 'RESET_SORT';
+export const RESET_ALL             = 'RESET_ALL';

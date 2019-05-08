@@ -6,7 +6,7 @@ import { applyFilter, getSortFunc } from '../functions/SortFilter';
 
 const mapStateToProps = state => ({
 
-	products: applyFilter(state.goods, state.filterByCompany).sort(getSortFunc(state.sort))
+	products: applyFilter(state.goods, state.filterByCompany, state.inStock).sort(getSortFunc(state.sort))
 
 });
 

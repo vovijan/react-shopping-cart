@@ -16,7 +16,7 @@ export default class Sidebar extends Component {
 	};
 
 	onClick = () => {
-		this.props.resetFilter();
+		this.props.resetAll();
 		this.setState({
 			isActive: false
 		})
@@ -44,25 +44,7 @@ export default class Sidebar extends Component {
 				{
 					this.state.isActive ?
 						<>
-							<div className="card border-secondary mb-3" style={{maxWidth: '25rem'}}>
-								<div className="card-header">Sort alphabetically</div>
-								<div className="btn-group-vertical" role="group" aria-label="Basic example">
-									<button
-										className="btn btn-light"
-										onClick={this.props.aZ}
-									>
-										A-Z
-									</button>
-									<button
-										className="btn btn-light"
-										onClick={this.props.zA}
-									>
-										Z-A
-									</button>
-								</div>
-							</div>
-
-							<div className="card border-secondary mb-3" style={{maxWidth: '25rem'}}>
+							<div className="card border-light mb-3" style={{maxWidth: '25rem'}}>
 								<div className="card-header">Stock</div>
 								<div className="btn-group-vertical" role="group" aria-label="Basic example">
 									<button
@@ -77,14 +59,44 @@ export default class Sidebar extends Component {
 									>
 										Out Stock
 									</button>
+									<button
+										className="btn btn-outline-danger"
+										onClick={this.props.resetStock}
+									>
+										Reset
+									</button>
+								</div>
+							</div>
+
+							<div className="card border-light mb-3" style={{maxWidth: '25rem'}}>
+								<div className="card-header">Sort alphabetically</div>
+								<div className="btn-group-vertical" role="group" aria-label="Basic example">
+									<button
+										className="btn btn-light"
+										onClick={this.props.aZ}
+									>
+										A-Z
+									</button>
+									<button
+										className="btn btn-light"
+										onClick={this.props.zA}
+									>
+										Z-A
+									</button>
+									<button
+										className="btn btn-outline-danger"
+										onClick={this.props.resetSort}
+									>
+										Reset
+									</button>
 								</div>
 							</div>
 
 							<button
-								className="btn btn-outline-danger btn-block"
+								className="btn btn-danger btn-block"
 								onClick={ this.onClick }
 							>
-								Reset filter
+								Reset all
 							</button>
 						</> : null
 				}
