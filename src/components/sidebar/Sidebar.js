@@ -10,7 +10,8 @@ export default class Sidebar extends Component {
 	state = {
 		isActive: false,
 		selected: null,
-		stock: ''
+		stock: '',
+		sort: ''
 	};
 
 	handleClick = (id, names) => {
@@ -32,6 +33,19 @@ export default class Sidebar extends Component {
 		}
 		this.setState({
 			stock: param
+		})
+	};
+
+	handleClickSort = (param) => {
+		if (param === 'aZ') {
+			this.props.aZ();
+		} else if (param === 'zA') {
+			this.props.zA();
+		} else if (param === 'resetSort') {
+			this.props.resetSort();
+		}
+		this.setState({
+			sort: param
 		})
 	};
 
@@ -100,27 +114,32 @@ export default class Sidebar extends Component {
 					<div className="card-header">Sort</div>
 					<div className="btn-group-vertical" role="group" aria-label="Basic example">
 
+						<SortButton
+							isActive={this.state.sort === 'aZ'}
+							isDanger={false}
+							handleClick={() => this.handleClickSort('aZ')}
+						>
+							A-Z
+						</SortButton>
 
+						<SortButton
+							isActive={this.state.sort === 'zA'}
+							isDanger={false}
+							handleClick={() => this.handleClickSort('zA')}
+						>
+							Z-A
+						</SortButton>
+
+						<SortButton
+							isActive={false}
+							isDanger={true}
+							handleClick={() => this.handleClickSort('resetSort')}
+						>
+							Reset
+						</SortButton>
 
 					</div>
 				</div>
-
-				{/*
-				<FilterStock
-					inStock           ={this.props.inStock}
-					outStock          ={this.props.outStock}
-					resetStock        ={this.props.resetStock}
-					selected          ={this.state.selectedStock}
-					selectedStockClick={this.selectedStockClick}
-				/>
-
-				<SortProductList
-					aZ         ={this.props.aZ}
-					zA         ={this.props.zA}
-					resetSort  ={this.props.resetSort}
-					selected   ={this.state.selected}
-				/>
-				*/}
 
 				<button
 					className="btn btn-danger btn-block"
