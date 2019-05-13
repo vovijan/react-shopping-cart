@@ -25,7 +25,7 @@ export default class Sidebar extends Component {
 		if (param === 'inStock') {
 			this.props.inStock();
 		} else if (param === 'outStock') {
-			this.props.resetStock();
+			this.props.outStock();
 		} else if (param === 'resetStock') {
 			this.props.resetStock();
 		}
@@ -94,6 +94,7 @@ export default class Sidebar extends Component {
 
 					</div>
 				</div>
+
 				{/*
 				<FilterStock
 					inStock           ={this.props.inStock}
@@ -110,6 +111,7 @@ export default class Sidebar extends Component {
 					selected   ={this.state.selected}
 				/>
 				*/}
+
 				<button
 					className="btn btn-danger btn-block"
 					onClick={() => {
