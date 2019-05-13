@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import SearchCompany        from "./SearchCompany";
 import FilterStock          from "./FilterStock";
 import SortProductList      from "./SortProductList";
+import { FilterButton } 		from "./FilterButton";
 
 import '../styleComponents.css';
 
 export default class Sidebar extends Component {
 
 	state = {
+		isActive: false,
 		selected:      null,
-		selectedStock: false
+		stock: ''
 	};
 
 	handleClick = (id, names) => {
@@ -52,7 +54,7 @@ export default class Sidebar extends Component {
 							})
 						}}
 					>
-						Reset all
+						Reset
 					</button>
 				</div>
 

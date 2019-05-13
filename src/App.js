@@ -10,10 +10,10 @@ function App() {
     <div className="container-fluid">
       <BasketContainer />
       <div className="row">
-        <div className="col-md-2 col-sm-2">
+        <div className="col-md-3 col-sm-3">
           <SidebarContainer/>
         </div>
-	      <div className="col-md-10 col-sm-10">
+	      <div className="col-md-9 col-sm-9">
           <ProductListContainer/>
 	      </div>
       </div>
