@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchCompany        from "./SearchCompany";
 import { FilterButton } 		from "./FilterButton";
+import {SortButton}         from "./SortButton";
 
 import '../styleComponents.css';
 
@@ -91,6 +92,15 @@ export default class Sidebar extends Component {
 						>
 							Reset
 						</FilterButton>
+
+					</div>
+				</div>
+
+				<div className="card border-light mb-3">
+					<div className="card-header">Sort</div>
+					<div className="btn-group-vertical" role="group" aria-label="Basic example">
+
+
 
 					</div>
 				</div>
