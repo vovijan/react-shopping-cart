@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import SearchCompany        from "./SearchCompany";
-import FilterStock          from "./FilterStock";
-import SortProductList      from "./SortProductList";
 import { FilterButton } 		from "./FilterButton";
 
 import '../styleComponents.css';
@@ -10,7 +8,7 @@ export default class Sidebar extends Component {
 
 	state = {
 		isActive: false,
-		selected:      null,
+		selected: null,
 		stock: ''
 	};
 
@@ -18,13 +16,21 @@ export default class Sidebar extends Component {
 		this.props.nameCompanyFilter(names);
 
 		this.setState({
+			isActive: true,
 			selected: id
 		})
 	};
 
-	selectedStockClick = () => {
+	handleClickStock = (param) => {
+		if (param === 'inStock') {
+			this.props.inStock();
+		} else if (param === 'outStock') {
+			this.props.resetStock();
+		} else if (param === 'resetStock') {
+			this.props.resetStock();
+		}
 		this.setState({
-			selectedStock: !this.state.selectedStock
+			stock: param
 		})
 	};
 
@@ -58,6 +64,37 @@ export default class Sidebar extends Component {
 					</button>
 				</div>
 
+				<div className="card border-light mb-3">
+					<div className="card-header">Stock</div>
+					<div className="btn-group-vertical" role="group" aria-label="Basic example">
+
+						<FilterButton
+							isActive={this.state.stock === 'inStock'}
+							isDanger={false}
+							handleClick={() => this.handleClickStock('inStock')}
+						>
+							In Stock
+						</FilterButton>
+
+						<FilterButton
+							isActive={this.state.stock === 'outStock'}
+							isDanger={false}
+							handleClick={() => this.handleClickStock('outStock')}
+						>
+							Out Stock
+						</FilterButton>
+
+						<FilterButton
+							isActive={false}
+							isDanger={true}
+							handleClick={() => this.handleClickStock('resetStock')}
+						>
+							Reset
+						</FilterButton>
+
+					</div>
+				</div>
+				{/*
 				<FilterStock
 					inStock           ={this.props.inStock}
 					outStock          ={this.props.outStock}
@@ -72,7 +109,7 @@ export default class Sidebar extends Component {
 					resetSort  ={this.props.resetSort}
 					selected   ={this.state.selected}
 				/>
-
+				*/}
 				<button
 					className="btn btn-danger btn-block"
 					onClick={() => {
