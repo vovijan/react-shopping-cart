@@ -7,7 +7,8 @@ import {
 	NAME_COMPANY_FILTER,
 	RESET_SORT,
 	RESET_STOCK,
-	RESET_ALL
+	RESET_ALL,
+	CHECKOUT
 } from "./constants";
 import { data } from './data';
 
@@ -95,6 +96,10 @@ export const reducer = (state = initialState, action) => {
 				sort: action.payload,
 				inStock: action.payload
 			};
+		/*case CHECKOUT:
+			return{
+
+			};*/
 		default:
 			return state;
 	}

@@ -13,7 +13,11 @@ const mapDispatchToProps = dispatch => ({
 	}
 });
 
-const BasketContainer = ({ cart, deleteToCart }) => <Basket goods={cart} deleteToCart={deleteToCart} />;
+const BasketContainer = ({ cart, deleteToCart }) =>
+	<Basket
+		goods={cart}
+		deleteToCart={deleteToCart}
+	/>;
 
 export default connect(
 	mapStateToProps,

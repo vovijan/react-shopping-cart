@@ -8,3 +8,4 @@ export const NAME_COMPANY_FILTER   = 'NAME_COMPANY_FILTER';
 export const RESET_STOCK           = 'RESET_STOCK';
 export const RESET_SORT            = 'RESET_SORT';
 export const RESET_ALL             = 'RESET_ALL';
+export const CHECKOUT              = 'CHECKOUT';

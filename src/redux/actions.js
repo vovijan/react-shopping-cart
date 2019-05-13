@@ -8,7 +8,8 @@ import {
   NAME_COMPANY_FILTER,
 	RESET_STOCK,
 	RESET_SORT,
-	RESET_ALL
+	RESET_ALL,
+	CHECKOUT
 } from './constants';
 
 export const addToCart = payload => ({
@@ -58,5 +59,10 @@ export const resetSort = payload => ({
 
 export const resetAll = payload => ({
 	type: RESET_ALL,
+	payload
+});
+
+export const checkOut = payload => ({
+	type: CHECKOUT,
 	payload
 });
