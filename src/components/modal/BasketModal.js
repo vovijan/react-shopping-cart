@@ -52,13 +52,17 @@ export default class BasketModal extends React.Component {
 					<span>SUBTOTAL: </span>
 					<span className='price__color'>${ totalPrice }</span>
 				</p>
-				<button
-					className="btn btn-outline-success btn-lg btn-block"
-					onClick={() => {
-						this.props.checkOut({totalQuality});
-						totalQuality === 0 ? alert('Cart is empty!') : alert(`Order by $ ${ totalPrice } and ${ totalQuality } count created!`)
-					}}
-				>CHECKOUT</button>
+
+				{
+					totalQuality !== 0 ?
+						<button
+							className="btn btn-outline-success btn-lg btn-block"
+							onClick={() => {
+								this.props.checkOut({totalQuality});
+								alert(`Order by $ ${ totalPrice } and ${ totalQuality } count created!`)
+							}}
+						>CHECKOUT</button> : null
+				}
 			</>
 		)
 	}
