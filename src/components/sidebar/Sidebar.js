@@ -54,7 +54,7 @@ export default class Sidebar extends Component {
 			<div className="sidebar">
 				<div className="card border-light mb-3">
 					<div className="card-header">Company Name</div>
-					<div className="btn-group-vertical" role="group" aria-label="Basic example">
+					<div className="btn-group-vertical">
 						{
 							this.props.nameCompany.map((item) => {
 								return <SearchCompany key={item.id}
@@ -81,7 +81,7 @@ export default class Sidebar extends Component {
 
 				<div className="card border-light mb-3">
 					<div className="card-header">Stock</div>
-					<div className="btn-group-vertical" role="group" aria-label="Basic example">
+					<div className="btn-group-vertical">
 
 						<FilterButton
 							isActive={this.state.stock === 'inStock'}
@@ -112,7 +112,7 @@ export default class Sidebar extends Component {
 
 				<div className="card border-light mb-3">
 					<div className="card-header">Sort</div>
-					<div className="btn-group-vertical" role="group" aria-label="Basic example">
+					<div className="btn-group-vertical">
 
 						<SortButton
 							isActive={this.state.sort === 'aZ'}
