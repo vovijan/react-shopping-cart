@@ -4,9 +4,9 @@ import './Basket.css';
 
 export default class BasketModal extends React.Component {
 	render() {
-		const arr = this.props.goods.map(good => good.price);
-		console.log(arr);
-		const result = arr.reduce((sum, current) => sum + current, 0);
+		const totalPrice = this.props.goods.reduce((sum, current) => sum + current.price, 0);
+
+		const totalQuality = this.props.goods.reduce((sum, current) => sum + current.num, 0);
 		return (
 			<>
 				<h1 style={{textAlign: 'center'}}>Cart</h1>
@@ -31,7 +31,11 @@ export default class BasketModal extends React.Component {
 										</div>
 									</div>
 								</div>
-								<button type="button" className="btn btn-outline-danger" onClick={() => this.props.deleteToCart(good.id)}>
+								<button
+									type="button"
+									className="btn btn-outline-danger"
+									onClick={() => this.props.deleteToCart(good.id)}
+								>
 									<i className="fas fa-ban"></i>
 								</button>
 							</li>
@@ -39,8 +43,13 @@ export default class BasketModal extends React.Component {
 					}
 				</ul>
 				<p>
+					<span>TOTAL QUALITY: </span>
+					<span className='price__color'>{ totalQuality } </span>
+					<span>count</span>
+				</p>
+				<p>
 					<span>SUBTOTAL: </span>
-					<span className='price__color'>${result}</span>
+					<span className='price__color'>${ totalPrice }</span>
 				</p>
 				<button className="btn btn-outline-success btn-lg btn-block">CHECKOUT</button>
 			</>
