@@ -146,7 +146,9 @@ export default class Sidebar extends Component {
 					onClick={() => {
 						this.props.resetAll();
 						this.setState({
-							selected: null
+							selected: null,
+							stock: '',
+							sort: ''
 						})
 					}}
 				>
