@@ -19,8 +19,7 @@ export default class Basket extends React.Component {
 
 	render() {
 		const { open } = this.state;
-		const arr = this.props.goods.map(good => good.num);
-		const result = arr.reduce((sum, current) => sum + current, 0);
+		const result = this.props.goods.reduce((sum, current) => sum + current.num, 0);
 		return (
 			<>
 				<button
@@ -34,7 +33,11 @@ export default class Basket extends React.Component {
 					</span>
 				</button>
 				<Modal open={open} onClose={this.onCloseModal} center>
-					<BasketModal goods={this.props.goods} deleteToCart={this.props.deleteToCart} />
+					<BasketModal
+						goods={this.props.goods}
+						deleteToCart={this.props.deleteToCart}
+						checkOut={this.props.checkOut}
+					/>
 				</Modal>
 			</>
 		)

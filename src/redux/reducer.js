@@ -96,11 +96,12 @@ export const reducer = (state = initialState, action) => {
 				sort: action.payload,
 				inStock: action.payload
 			};
-		/*case CHECKOUT:
-			return{
-
-			};*/
+		case CHECKOUT:
+			return {
+				...state,
+				cart: []
+			};
 		default:
-			return state;
+		return state;
 	}
 };

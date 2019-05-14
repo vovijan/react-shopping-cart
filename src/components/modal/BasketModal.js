@@ -3,6 +3,7 @@ import React from 'react';
 import './Basket.css';
 
 export default class BasketModal extends React.Component {
+
 	render() {
 		const totalPrice = this.props.goods.reduce((sum, current) => sum + current.price, 0);
 
@@ -51,7 +52,13 @@ export default class BasketModal extends React.Component {
 					<span>SUBTOTAL: </span>
 					<span className='price__color'>${ totalPrice }</span>
 				</p>
-				<button className="btn btn-outline-success btn-lg btn-block">CHECKOUT</button>
+				<button
+					className="btn btn-outline-success btn-lg btn-block"
+					onClick={() => {
+						this.props.checkOut({totalQuality});
+						totalQuality === 0 ? alert('Cart is empty!') : alert(`Order by $ ${ totalPrice } and ${ totalQuality } count created!`)
+					}}
+				>CHECKOUT</button>
 			</>
 		)
 	}
