@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './styleComponents.css';
+
 export default class ListItem extends Component {
 
 	state = {
@@ -27,7 +29,7 @@ export default class ListItem extends Component {
 			<li>
 				<div className="card" style={{width: '18rem'}}>
 					<img src={pic} className="card-img-top" alt="Company product"/>
-					<div className="card-body">
+					<div className="card-body text-center">
 						<h6 className="card-title">-{name}-</h6>
 						<p className="card-text">{company}</p>
 						<p className="card-text" style={styleProd}>{color}</p>
